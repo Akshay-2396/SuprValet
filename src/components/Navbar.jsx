@@ -7,11 +7,10 @@ import { useAuth } from '../models/authContext'
 const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/services', label: 'Services' },
-  { path: '/booking', label: 'Book Now' },
   { path: '/pricing', label: 'Pricing' },
   { path: '/faq', label: 'FAQ' },
   { path: '/blog', label: 'Blog' },
-  { path: '/driver', label: 'Drive' },
+  { path: '/driver', label: 'Driver Hub' },
   { path: '/contact', label: 'Contact' },
 ]
 
@@ -103,7 +102,15 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-4">
             {isAuthenticated ? (
-              <div className="relative" ref={userMenuRef}>
+              <div className="flex items-center gap-3">
+                <a
+                  href="/booking"
+                  onClick={(e) => handleNav(e, '/booking')}
+                  className="btn-primary flex items-center justify-center gap-2 text-sm py-2.5 px-6 cursor-pointer"
+                >
+                  Book Now <ChevronRight size={16} />
+                </a>
+                <div className="relative" ref={userMenuRef}>
                 <button
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-200 border border-dark-300 hover:border-primary-500 transition-colors"
@@ -139,15 +146,25 @@ export default function Navbar() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+                </div>
               </div>
             ) : (
-              <a
-                href="/login"
-                onClick={(e) => handleNav(e, '/login')}
-                className="btn-primary flex items-center justify-center gap-2 text-sm py-2.5 px-6 cursor-pointer"
-              >
-                Sign In <ChevronRight size={16} />
-              </a>
+              <div className="flex items-center gap-4">
+                <a
+                  href="/login"
+                  onClick={(e) => handleNav(e, '/login')}
+                  className="text-gray-300 hover:text-primary-500 underline decoration-primary-500 underline-offset-[12px] cursor-pointer"
+                >
+                  Sign In
+                </a>
+                <a
+                  href="/booking"
+                  onClick={(e) => handleNav(e, '/booking')}
+                  className="btn-primary flex items-center justify-center gap-2 text-sm py-2.5 px-6 cursor-pointer"
+                >
+                  Book Now <ChevronRight size={16} />
+                </a>
+              </div>
             )}
           </div>
 
@@ -202,13 +219,22 @@ export default function Navbar() {
                   </button>
                 </>
               ) : (
-                <a
-                  href="/login"
-                  onClick={(e) => handleNav(e, '/login')}
-                  className="btn-primary text-center mt-2 text-sm cursor-pointer flex items-center justify-center gap-2"
-                >
-                  Sign In <ChevronRight size={16} />
-                </a>
+                <div className="flex flex-col gap-2 mt-2">
+                  <a
+                    href="/login"
+                    onClick={(e) => handleNav(e, '/login')}
+                    className="text-gray-300 hover:text-primary-500 underline decoration-primary-500 underline-offset-[12px] cursor-pointer text-center transition-colors"
+                  >
+                    Sign In
+                  </a>
+                  <a
+                    href="/booking"
+                    onClick={(e) => handleNav(e, '/booking')}
+                    className="btn-primary text-center text-sm cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    Book Now <ChevronRight size={16} />
+                  </a>
+                </div>
               )}
             </div>
           </motion.div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check, X, Clock, Shield, Info } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -69,7 +70,7 @@ const pricingPlans = [
       { name: 'Employee portal', included: true },
       { name: 'Custom SLA', included: true },
     ],
-    cta: 'Contact Sales',
+    cta: 'Contact Us',
     popular: false,
   },
 ]
@@ -114,6 +115,18 @@ const cancellationPolicy = [
 ]
 
 export default function Pricing() {
+  const navigate = useNavigate()
+
+  const handleCtaClick = (cta) => {
+    if (cta === 'Contact Sales') {
+      window.open('https://wa.me/918428527015?text=Hi, I want to know more about your corporate services', '_blank')
+    } else if (cta === 'Get Quote') {
+      window.open('https://wa.me/918428527015?text=Hi, I want to get a quote for event valet services', '_blank')
+    } else {
+      navigate('/booking')
+    }
+  }
+
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="pt-20">
       <section className="py-20 relative overflow-hidden">
@@ -173,6 +186,7 @@ export default function Pricing() {
                 </ul>
                 
                 <button
+                  onClick={() => handleCtaClick(plan.cta)}
                   className={`w-full py-3 rounded-xl font-semibold transition-all ${
                     plan.popular
                       ? 'bg-primary-500 text-black hover:bg-primary-400'

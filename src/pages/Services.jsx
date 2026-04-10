@@ -15,8 +15,6 @@ const services = [
     tagline: 'Park Smart, Live Easy',
     description:
       'Our professional valet attendants handle your car with absolute care. From luxury hotels to busy restaurants — we are here 24/7 to make parking effortless.',
-    price: '₹149',
-    unit: '/hour',
     color: 'from-primary-500/20 to-transparent',
     accent: '#00C853',
     features: [
@@ -34,8 +32,6 @@ const services = [
     tagline: 'Your Chauffeur, On Demand',
     description:
       'Hire a professional personal driver for your daily commute, airport transfers, business meetings, or outstation travel. Our chauffeurs are background-verified and trained.',
-    price: '₹299',
-    unit: '/hour',
     color: 'from-blue-500/10 to-transparent',
     accent: '#3B82F6',
     features: [
@@ -53,8 +49,6 @@ const services = [
     tagline: 'Elevate Every Occasion',
     description:
       'Make your events unforgettable with our premium valet management service. From intimate private parties to grand corporate events with 500+ guests.',
-    price: '₹199',
-    unit: '/hour',
     color: 'from-purple-500/10 to-transparent',
     accent: '#A855F7',
     features: [
@@ -72,8 +66,6 @@ const services = [
     tagline: 'Fleet Solutions for Business',
     description:
       'Monthly driver and valet subscriptions for offices, tech parks, and corporate campuses. Streamline your employee transport and parking management.',
-    price: '₹399',
-    unit: '/hour',
     color: 'from-orange-500/10 to-transparent',
     accent: '#F97316',
     features: [
@@ -145,14 +137,6 @@ export default function Services() {
                 </span>
                 <h2 className="font-display font-black text-4xl text-white mb-4">{service.title}</h2>
                 <p className="text-gray-400 leading-relaxed mb-6 max-w-lg">{service.description}</p>
-
-                {/* Price */}
-                <div className="flex items-end gap-2 mb-6">
-                  <span className="font-display font-black text-5xl" style={{ color: service.accent }}>
-                    {service.price}
-                  </span>
-                  <span className="text-gray-400 mb-2">{service.unit}</span>
-                </div>
 
                 <Link
                   to="/booking"
