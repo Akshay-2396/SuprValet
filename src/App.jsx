@@ -17,8 +17,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import ForgotPassword from './pages/ForgotPassword'
 import Dashboard from './pages/Dashboard'
-import FAQ from './pages/FAQ'
-import Blog from './pages/Blog'
+import InsightsHelp from './pages/InsightsHelp'
 import BlogDetail from './pages/BlogDetail'
 import BecomeDriver from './pages/BecomeDriver'
 import DriverApplication from './pages/DriverApplication'
@@ -42,8 +41,7 @@ function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/insights" element={<InsightsHelp />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/driver" element={<BecomeDriver />} />
         <Route path="/driver-apply" element={<DriverApplication />} />

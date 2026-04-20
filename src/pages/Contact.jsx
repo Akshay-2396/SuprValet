@@ -11,7 +11,7 @@ const pageVariants = {
 const contactInfo = [
   { icon: Phone, label: 'Phone', value: '+91 84285270155', href: 'tel:+918428527015' },
   { icon: Mail, label: 'Email', value: 'contact@suprvalet.com', href: 'mailto:contact@suprvalet.com?subject=Inquiry from SuprValet Website' },
-  { icon: MapPin, label: 'Headquarters', value: 'Chennai', href: 'https://www.google.com/maps/search/Chennai,+Tamil+Nadu,+India' },
+  { icon: MapPin, label: 'Headquarters', value: 'Level 7, IIFL Towers, 143, MGR Main Road, Perungudi, Chennai – 96', href: 'https://www.google.com/maps/search/IIFL+Towers,+Perungudi,+Chennai' },
 ]
 
 export default function Contact() {

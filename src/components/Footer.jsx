@@ -11,19 +11,19 @@ const footerLinks = {
   Company: [
     { label: 'About Us', path: '/about' },
     { label: 'Our Team', path: '/about' },
-    { label: 'Blog', path: '/blog' },
+    { label: 'Blog', path: '/insights' },
     { label: 'Careers', path: '/driver' },
   ],
   Support: [
     { label: 'Contact Us', path: '/contact' },
     { label: 'Book Now', path: '/booking' },
-    { label: 'FAQs', path: '/faq' },
+    { label: 'FAQs', path: '/insights' },
     { label: 'Pricing', path: '/pricing' },
   ],
   'Drive With Us': [
     { label: 'Become a Driver', path: '/driver' },
     { label: 'Apply Now', path: '/driver-apply' },
-    { label: 'Driver FAQ', path: '/faq' },
+    { label: 'Driver FAQ', path: '/insights' },
   ],
 }
 
@@ -52,8 +52,8 @@ export default function Footer() {
               <a href="mailto:contact@suprvalet.com" className="flex items-center gap-2 hover:text-primary-500 transition-colors">
                 <Mail size={14} /> contact@suprvalet.com
               </a>
-              <span className="flex items-center gap-2">
-                <MapPin size={14} /> Chennai, Tamil Nadu
+              <span className="flex items-center gap-2 hover:text-primary-500 transition-colors">
+                <MapPin size={16} /> Level 7, IIFL Towers, 143, MGR Main Road, Perungudi, Chennai – 96
               </span>
             </div>
             {/* Social */}

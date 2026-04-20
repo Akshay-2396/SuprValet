@@ -8,9 +8,8 @@ const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/services', label: 'Services' },
   { path: '/pricing', label: 'Pricing' },
-  { path: '/faq', label: 'FAQ' },
-  { path: '/blog', label: 'Blog' },
-  { path: '/driver', label: 'Driver Hub' },
+  { path: '/insights', label: 'Insights & Help' },
+  { path: '/driver', label: 'Drive with Us' },
   { path: '/contact', label: 'Contact' },
 ]
 
