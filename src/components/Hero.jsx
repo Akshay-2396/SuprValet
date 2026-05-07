@@ -608,8 +608,8 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Floating badges - contained within parent with overflow-hidden */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Floating badges - positioned around the card */}
+          <div className="absolute inset-0 pointer-events-none">
             {floatingBadges.map((badge, i) => (
               <motion.div
                 key={badge.label}
