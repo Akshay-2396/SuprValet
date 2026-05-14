@@ -136,6 +136,34 @@
   pointer-events: none;
 }
 
+/* Scroll Indicator */
+.scroll-indicator {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-indicator:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 12px rgba(0, 200, 83, 0.6));
+}
+
+.scroll-indicator:hover .scroll-line {
+  animation-duration: 0.6s;
+}
+
+.scroll-line {
+  animation: scrollLinePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollLinePulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
+}
+
+.scroll-indicator:active {
+  transform: scale(0.95);
+}
+
 /* Image blend modes */
 .mix-blend-lighter {
   mix-blend-mode: lighten;

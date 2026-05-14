@@ -430,8 +430,9 @@
 //   );
 // }
 
+import { useCallback } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChevronRight, Star, Shield, Clock } from "lucide-react";
 
 const floatingBadges = [
@@ -456,6 +457,15 @@ const floatingBadges = [
 ];
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleScrollClick = useCallback(() => {
+    const nextSection = document.getElementById("services-section");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
+
   return (
     <section className="relative w-full max-w-full min-w-0 overflow-x-hidden flex items-center justify-center min-h-screen">
       
@@ -641,17 +651,26 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator - hidden on mobile */}
-      <motion.div
-        className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
-        <div className="w-px h-10 bg-gradient-to-b from-primary-500 to-transparent" />
-        <span className="text-[10px] text-gray-600 uppercase tracking-widest">
-          Scroll
-        </span>
-      </motion.div>
-    </section>
+{/* Scroll indicator — interactive navigation control */}
+       <motion.div
+         className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 scroll-indicator"
+         animate={{ y: [0, 8, 0] }}
+         transition={{ duration: 1.5, repeat: Infinity }}
+         onClick={handleScrollClick}
+         role="button"
+         tabIndex={0}
+         aria-label="Scroll to services section"
+         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleScrollClick(); }}
+       >
+         <motion.div
+           className="w-px h-10 bg-gradient-to-b from-primary-500 to-transparent scroll-line"
+           animate={{ scaleY: [1, 1.15, 1] }}
+           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+         />
+         <span className="text-[10px] text-gray-400 uppercase tracking-widest transition-colors duration-300 hover:text-primary-500">
+           Scroll
+         </span>
+       </motion.div>
+     </section>
   );
 }

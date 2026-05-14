@@ -75,8 +75,8 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
-      {/* Services Overview */}
-      <section className="py-24 relative">
+{/* Services Overview */}
+       <section id="services-section" className="py-24 relative">
         <div className="absolute inset-0 bg-glow opacity-30" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
