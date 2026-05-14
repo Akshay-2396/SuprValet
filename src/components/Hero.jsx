@@ -457,7 +457,7 @@ const floatingBadges = [
 
 export default function Hero() {
   return (
-    <section className="relative w-full max-w-full min-w-0 overflow-x-hidden flex items-center justify-center">
+    <section className="relative w-full max-w-full min-w-0 overflow-x-hidden flex items-center justify-center min-h-screen">
       
       {/* Background - Constrained to hero width */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
