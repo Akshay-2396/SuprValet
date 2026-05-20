@@ -25,7 +25,7 @@ const responses = {
   time: "⏰ SuprValet operates 24/7 — round the clock, every day of the year! Our support team is always available. You can book online anytime.",
   location: "📍 We currently operate in Mumbai, Delhi, Bangalore, Pune, and Hyderabad — and expanding rapidly! Check our Contact page for city-specific details.",
   cancel: "✅ Cancellations made 2+ hours before service are fully refunded. Late cancellations may incur a nominal fee. For help, reach us on WhatsApp or call us directly!",
-  default: "🤔 That's a great question! For detailed assistance, you can:\n\n• 📞 Call: +91 99999 99999\n• 💬 WhatsApp us using the green button\n• 📧 Email: hello@suprvalet.com\n\nOr visit our Booking page to get started!",
+  default: "🤔 That's a great question! For detailed assistance, you can:\n\n• 📞 Call: +91 8428527015\n• 💬 WhatsApp us using the green button\n• 📧 Email: contact@suprvalet.com\n\nOr visit our Booking page to get started!",
 }
 
 function getBotResponse(input) {

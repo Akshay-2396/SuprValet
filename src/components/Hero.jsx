@@ -25,11 +25,11 @@ const floatingBadges = [
 ];
 
 const heroImages = [
-  "https://storage.googleapis.com/suprvalet.com/dist/Hero.png",
-  "https://storage.googleapis.com/suprvalet.com/dist/Hero1.png",
-  "https://storage.googleapis.com/suprvalet.com/dist/Hero2.png",
-  "https://storage.googleapis.com/suprvalet.com/dist/Hero3.png",
-  "https://storage.googleapis.com/suprvalet.com/dist/Hero4.png",
+  "https://storage.googleapis.com/www.suprvalet.com/Hero.png",
+  "https://storage.googleapis.com/www.suprvalet.com/Hero1.png",
+  "https://storage.googleapis.com/www.suprvalet.com/Hero2.png",
+  "https://storage.googleapis.com/www.suprvalet.com/Hero3.png",
+  "https://storage.googleapis.com/www.suprvalet.com/Hero4.png",
 ];
 
 export default function Hero() {
